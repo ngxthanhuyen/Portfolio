@@ -1,16 +1,16 @@
 from pathlib import Path
-
+import os
 BASE_DIR = Path(__file__).resolve().parent
 
 SECRET_KEY = 'cle_secrete'
 DEBUG = True
 ALLOWED_HOSTS = ['*']
 
-# Mailjet Configuration
-MAILJET_API_KEY = 'b3b94c807167ad58563064154c7c2f4a'  
-MAILJET_API_SECRET = 'ef2ecd86804652a2fb28c83b2200206f'
-DEFAULT_FROM_EMAIL = 'nthanhuyen1411@gmail.com'
-CONTACT_EMAIL = 'nthanhuyen1411@gmail.com'
+
+MAILJET_API_KEY = os.getenv("MAILJET_API_KEY")
+MAILJET_API_SECRET = os.getenv("MAILJET_API_SECRET")
+DEFAULT_FROM_EMAIL = os.getenv("DEFAULT_FROM_EMAIL")
+CONTACT_EMAIL = os.getenv("CONTACT_EMAIL")
 
 INSTALLED_APPS = [
     'django.contrib.admin',
