@@ -1,0 +1,243 @@
+{% load static %}
+<section id="projets" class="projets">
+    <div class="projets-container">
+        <h2 class="projets-title">MES RÉALISATIONS</h2>
+        <p class="projets-subtitle">
+            Découvrez mes projets concrets en développement
+        </p>
+
+       <div class="projets-list">
+            <!-- Projet 1 -->
+            <div class="projet-item">
+                <div class="projet-video-left">
+                    <div class="video-container">
+                        <video class="project-video" 
+                            controls 
+                            autoplay
+                            muted
+                            preload="auto"
+                            poster="{% static 'images/projet1-poster.jpg' %}">
+                            <source src="{% static 'videos/site-meteo.mp4' %}" type="video/mp4">                          
+                            Votre navigateur ne supporte pas la lecture de vidéos.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="projet-texte-right">
+                    <div class="projet-content">
+                        <h3 class="projet-title">Site web de météo</h3>
+                        <p class="projet-description">
+                            Ce site a été réalisé dans le cadre de la SAE 301 (Situation d'Apprentissage et d'Évaluation) par moi-même et 
+                            deux autres camarades de l'IUT. Les données météorologiques proviennent de l'API SYNOP, une API qui permet d'accéder 
+                            aux observations météo issues des stations météorologiques professionnelles réparties sur l'ensemble du territoire français, mises à jour régulièrement.
+                        </p>
+                        
+                        <div class="projet-technologies">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+
+                        <div class="projet-details">
+                            <div class="detail-column">
+                                <h4>Fonctionnalités</h4>
+                                <ul>
+                                    <li>Visualisation données temps réel</li>
+                                    <li>Recherche médecins par critères</li>
+                                    <li>Système d'authentification sécurisé</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="projet-links">
+                            <a href="https://github.com/ngxthanhuyen/SAE301" class="github-link" target="_blank">
+                                <span>Code source</span>
+                            </a>
+                            <a href="{% static 'docs/ppe-2023.pdf' %}" class="doc-link" target="_blank">
+                                <span>Voir la démo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 2 -->
+            <div class="projet-item reverse">
+                <div class="projet-video-right">
+                    <div class="video-container">
+                        <video class="project-video" 
+                            controls 
+                            autoplay
+                            muted
+                            preload="auto"
+                            poster="{% static 'images/projet2-poster.jpg' %}">
+                            <source src="{% static 'videos/site-ecommerce.mp4' %}" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture de vidéos.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="projet-texte-left">
+                    <div class="projet-content">
+                        <h3 class="projet-title">Application e-commerce</h3>
+                        <div class="projet-description">
+                            Conception d'une interface React connectée à une API REST Node.js/Express (JWT) avec gestion des données MongoDB pour un site e-commerce cosmétiques. 
+                        </div>
+                        
+                        <div class="projet-technologies">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Mongoose</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+
+                        <div class="projet-details">
+                            <div class="detail-column">
+                                <h4>Fonctionnalités</h4>
+                                <ul>
+                                    <li>Catalogue produits avec filtres et recherche</li>
+                                    <li>Système d'authentification et gestion de sessions</li>
+                                    <li>Panier, validation de commande et liste d'envies</li>
+                                    <li>API REST sécurisée (CRUD produits, utilisateurs, commandes)</li>
+                                </ul>
+                            </div>
+                            <div class="detail-column">
+                                <h4>Points clés</h4>
+                                <ul>
+                                    <li>Front React dynamique</li>
+                                    <li>Backend Node/Express avec JWT</li>
+                                    <li>Modélisation MongoDB avec Mongoose</li>
+                                    <li>Dockerisation pour déploiement</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="projet-links">
+                            <a href="https://github.com/ngxthanhuyen/SiteEcommerce" class="github-link" target="_blank">
+                                <span>Code source</span>
+                            </a>
+                            <a href="{% static 'videos/projet2-demo.mp4' %}" class="demo-link" download>
+                                <span>Télécharger la démo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 3 -->
+             <div class="projet-item">
+                <div class="projet-video-left">
+                    <div class="video-container">
+                        <img src="{% static 'images/pipelineCICD.png' %}"
+                            alt="Microservices et pipeline CI/CD"
+                            class="project-image">
+                    </div>
+                </div>
+
+                <div class="projet-texte-right">
+                    <div class="projet-content">
+                        <h3 class="projet-title">Mise en place d’une chaîne CI/CD pour automatiser le déploiement sur le Cloud</h3>
+                        <p class="projet-description">
+                            Développement local de deux microservices (un service Spring Boot et un service Flask). 
+                            Chaque service expose une API REST dédiée et communique via HTTP.
+                        </p>
+
+                        <div class="projet-technologies">
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Docker Compose</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">Docker Hub</span>
+                            <span class="tech-tag">AWS EC2</span>
+                        </div>
+
+                        <div class="projet-details">
+                            <div class="detail-column">
+                                <h4>Principales étapes</h4>
+                                <ul>
+                                    <li>Développer et tester localement deux microservices (Spring Boot & Flask) connectés à MongoDB.</li>
+                                    <li>Construction, tests unitaires et conteneurisation avec Docker et Docker Compose pour l'orchestration locale.</li>
+                                    <li>Intégration continue et publication d'images via GitHub Actions vers Docker Hub.</li>
+                                    <li>Déploiement sur une instance AWS EC2 sécurisée en utilisant des clés SSH pour l'accès.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="projet-links">
+                            <a href="https://github.com/ngxthanhuyen/AutoProd" class="github-link" target="_blank">
+                                <span>Code source</span>
+                            </a>
+                            <a href="{% static 'images/pipelineCICD.png' %}" class="doc-link" target="_blank">
+                                <span>Voir l'architecture</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 4 -->
+            <div class="projet-item reverse">
+                <div class="projet-video-right">
+                    <div class="video-container">
+                        <img src="{% static 'images/edumate.png' %}"
+                            alt="Edumate - Plateforme de soutien scolaire"
+                            class="project-image">
+                    </div>
+                </div>
+
+                <div class="projet-texte-left">
+                    <div class="projet-content">
+                        <h3 class="projet-title">Plateforme web & mobile de soutien scolaire (Edumate)</h3>
+                        <p class="projet-description">
+                            Développement d'une plateforme permettant de mettre en relation étudiants et tuteurs, 
+                            de favoriser l'échange de compétences entre pairs et de rendre l'accompagnement 
+                            plus accessible grâce à l'IA.
+                        </p>
+                        
+                        <div class="projet-technologies">
+                            <span class="tech-tag">Node.js/Express</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Blockchain (Ganache)</span>
+                            <span class="tech-tag">WebSocket</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">JWT</span>
+                        </div>
+
+                        <div class="projet-details">
+                            <div class="detail-column">
+                                <h4>Fonctionnalités clés</h4>
+                                <ul>
+                                    <li><strong>Recherche avancée :</strong> Filtrage par matière, niveau, tarif et localisation</li>
+                                    <li><strong>Gestion des annonces :</strong> Publication et modération des offres de cours</li>
+                                    <li><strong>Messagerie temps réel :</strong> Communication directe étudiants-tuteurs</li>
+                                    <li><strong>Échange de compétences :</strong> Entraide sans transaction financière</li>
+                                    <li><strong>Recherche sémantique IA :</strong> Service RAG avec Qdrant pour recommander les tuteurs pertinents</li>
+                                    <li><strong>E-wallet sécurisé :</strong> Gestion des crédits virtuels avec traçabilité via blockchain</li>
+                                    <li><strong>Analyse automatique des CV :</strong> Extraction intelligente des compétences</li>
+                                    <li><strong>Assistant IA :</strong> Disponible 24/7 pour répondre aux questions des utilisateurs et offrir une assistance personnalisée</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="projet-links">
+                            <a href="https://github.com/ngxthanhuyen/EduMate" class="github-link" target="_blank">
+                                <span>Code source</span>
+                            </a>
+                            <a href="#" class="demo-link" target="_blank">
+                                <span>Voir la démo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

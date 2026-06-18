@@ -1,0 +1,107 @@
+{% load static %}
+<section id="parcours" class="parcours">
+    <div class="parcours-container">
+        <h2 class="parcours-title">MON PARCOURS</h2>
+        <p class="parcours-subtitle">
+            Mon parcours vers l’informatique n’a pas été linéaire
+        </p>
+
+        <div class="vertical-timeline">
+            <div class="timeline"></div>
+
+            <!-- 2020 -->
+            <div class="timeline-year-container">
+                <img src="{% static 'images/2020.png' %}" alt="2020" class="timeline-year-image">
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content left">
+                    <div class="content-card">
+                        <div class="content-text">
+                            <div class="content-img">
+                                <img src="{% static 'images/bac.png' %}" alt="Baccalauréat STMG" class="title-image">
+                            </div>                            
+                            <p class="institution">Lycée Darius Milhaud • Marketing</p>
+                            <p class="mention">Mention Très Bien</p>
+                            <p class="description">
+                                Il s’agit d’une formation solide en gestion et commerce. À ce moment-là, je ne savais pas encore vraiment ce que je voulais faire et je me voyais surtout dans le marketing (sans avoir réellement pris le temps d’explorer d’autres domaines). Cette étape m’a néanmoins permis de découvrir le fonctionnement du monde professionnel et d’acquérir des bases utiles pour la suite de mon parcours.                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-content right">
+                    <div class="content-card">
+                        <div class="content-image">
+                            <img src="{% static 'images/lycee.jpg' %}" alt="Mon lycée">
+                            <div class="image-caption">Mon lycée</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2022 -->
+            <div class="timeline-year-container">
+                <img src="{% static 'images/2022.png' %}" alt="2022" class="timeline-year-image">
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content left">
+                    <div class="content-card">
+                        <div class="content-image">
+                            <img src="{% static 'images/coding.jpg' %}" alt="Découverte du code">
+                            <div class="image-caption">Découverte du code</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-content right">
+                    <div class="content-card">
+                        <div class="content-text">
+                            <div class="content-img">
+                                <img src="{% static 'images/declic.png' %}" alt="Baccalauréat STMG" class="declic-image">
+                            </div>                                
+                            <p class="highlight">
+                                Cependant, j’ai vite compris que le marketing ne me correspondait pas vraiment. C’est un domaine davantage tourné vers l’analyse de marché, la communication et la stratégie commerciale, alors que je recherchais quelque chose de plus logique et technique.                            </p>
+                            <p class="description">
+                                C’est à cette période que j’ai rencontré une amie, qui m’a fait découvrir son parcours en informatique. Curieuse, je me suis alors renseignée sur ce domaine et commencé à me former par moi-même. J’ai rapidement été attirée par son aspect très concret et technique : résoudre des problèmes, écrire du code, tester, améliorer et voir immédiatement le résultat de mon travail. C’est cette logique et ce côté pratique qui m’ont convaincue que l’informatique me correspondait davantage.                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2023 -->
+            <div class="timeline-year-container">
+                <img src="{% static 'images/2023.jpg' %}" alt="2023" class="timeline-year-image">
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content left">
+                    <div class="content-card">
+                        <div class="content-text">
+                            <div class="content-img">
+                                <img src="{% static 'images/but.png' %}" alt="Baccalauréat STMG" class="title-image">
+                            </div>       
+                            <p class="institution">IUT de Créteil-Vitry</p>
+                            <p class="badge">En cours</p>
+                            <p class="description">
+                                Ma formation est plutôt orientée vers la <span>pratique</span> et les projets concrets, je la trouve très polyvalente et enrichissante. Au cours de mon cursus, j’ai travaillé surtout sur le <span>développement logiciel</span> et le <span>développement web</span> (je maitrise aussi bien coté <span>frontend</span> que <span>backend</span>).<br>
+                                En parallèle, je développe aussi mes compétences en <span>bases de données</span> pour stocker et gérer de manière efficace et sécurisée les données de mes applications, que ce soit des <span>BD relationnelles</span> ou non relationnelles. <br>
+                                J’ai également beaucoup appris sur les <span>systèmes</span> et l’<span>infrastructure</span>. J’ai travaillé sur des environnements Linux, les réseaux, les bases de la sécurité, ainsi que sur la <span>conteneurisation avec Docker</span> et les premières pratiques <span>DevOps</span>, <span>CI/CD</span>. 
+                                Cela m’a permis de comprendre non seulement comment <span>développer une application</span> mais aussi comment la <span>déployer</span>, la <span>faire évoluer</span> et la <span>maintenir sur le long terme</span>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-content right">
+                    <div class="content-card">
+                        <div class="content-image">
+                            <img src="{% static 'images/iut.jpg' %}" alt="BUT Informatique">
+                            <div class="image-caption">Mon IUT</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

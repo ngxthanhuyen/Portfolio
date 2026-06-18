@@ -1,0 +1,107 @@
+{% load static %}
+<section id="experiences" class="experiences">
+    <div class="experiences-container">
+        <h2 class="experiences-title">MES EXPÉRIENCES</h2>
+        <p class="experiences-subtitle">
+            Stages et projets professionnels qui ont façonné mon parcours
+        </p>
+
+        <div class="experiences-list">
+            <!-- Expérience 1 - KAIST -->
+            <div class="exp-item">
+                <div class="exp-header-center">
+                    <h3 class="exp-title-center">Développement IA & Réseaux de Neurones – Interface PyQt5</h3>
+                    <p class="exp-date-center">avr. 2025 - juin 2025 · 2 mois</p>
+                </div>
+                <div class="exp-body">
+                    <p class="exp-company">Korea Advanced Institute of Science and Technology (KAIST) · Stage</p>
+                    <p class="exp-location">291 Daehak-ro, district de Yuseong, Daejeon, Corée du Sud · Sur site</p>
+                    <p class="exp-description">
+                        Conception et développement d'une interface graphique en Python (PyQt5) permettant d'entraîner et d'évaluer 
+                        des modèles de réseaux de neurones pour la prédiction de mouvements corporels (s'asseoir, se lever, marcher), 
+                        à partir de données issues de capteurs EMG et IMU.
+                    </p>
+                    
+                    <div class="exp-missions">
+                        <ul>
+                            <li>Prétraitement des données capteurs : Application de bandpass et lowpass filters sur les signaux EMG et IMU, nettoyage et normalisation des données, détection et suppression de valeurs aberrantes</li>
+                            <li>Sélection des hyperparamètres (batch size, epochs, learning rate…)</li>
+                            <li>Affichage des logs d'entraînement et suivi (barre de progression) en temps réel</li>
+                            <li>Visualisations graphiques intégrées : Génération des courbes de perte d'entraînement et de validation, affichage de la courbe de précision (accuracy), matrice de confusion</li>
+                            <li>Comparaison graphique entre vérité terrain (ground truth) et prédictions (régression/classification)</li>
+                            <li>Sauvegarde et chargement de modèles entraînés (sérialisation, réutilisation pour tests futurs)</li>
+                            <li>Comparaison entre deux modèles entraînés (performances, métriques, visualisations)</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-tech-list">
+                        <span class="exp-tech-tag">Python</span>
+                        <span class="exp-tech-tag">PyQt5</span>
+                        <span class="exp-tech-tag">TensorFlow/Keras</span>
+                        <span class="exp-tech-tag">NumPy</span>
+                        <span class="exp-tech-tag">Pandas</span>
+                        <span class="exp-tech-tag">Scikit-learn</span>
+                        <span class="exp-tech-tag">Matplotlib</span>
+                        <span class="exp-tech-tag">SciPy</span>
+                    </div>
+
+                    <div class="exp-links-group">
+                        <a href="#" class="exp-github-link">🐙 Code source</a>
+                        <a href="{% static 'docs/Rapport_Stage_S4_NGUYEN_ThanhUyen.pdf' %}" class="exp-pdf-link" target="_blank" rel="noopener" download>📄 Rapport de stage</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expérience 2 - Efficience Digitale -->
+            <div class="exp-item">
+                <div class="exp-header-center">
+                    <h3 class="exp-title-center">Développeuse web</h3>
+                    <p class="exp-date-center">02/03/2026 - 05/06/2026 · 14 semaines</p>
+                </div>
+                <div class="exp-body">
+                    <p class="exp-company">Efficience Digitale · Stage</p>
+                    <p class="exp-location">34 Rue de Turbigo, 75003 Paris · Sur site</p>
+                    <p class="exp-description">
+                        Stage de fin d'études au sein d'Efficience Digitale, une agence digitale spécialisée dans 
+                        la conception de solutions numériques innovantes à fort impact éducatif, social et sociétal.
+                        J'ai contribué au développement de trois projets : JeTuLis, STADY! et EQOZEN.
+                    </p>
+
+                    <div class="exp-missions">
+                        <ul>
+                            <li><strong>JeTuLis :</strong> Adaptation et enrichissement de la version desktop avec création de comptes enseignants/élèves, activités pédagogiques (lecture, écriture, mathématiques) et suivi des résultats</li>
+                            <li><strong>STADY! :</strong> Conception d'un module de coaching IA personnalisé (onboarding 5 étapes, génération de programme par IA, lecteur multimédia, planning avec déblocage linéaire, boucle de feedback adaptative)</li>
+                            <li><strong>EQOZEN :</strong> Création d'une plateforme collaborative avec React et Vue.js</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-competences">
+                        <h4>COMPÉTENCES DÉVELOPPÉES :</h4>
+                        <ul>
+                            <li><strong>Maîtrise technique :</strong> Développement Full JS (React, Vue.js, TypeScript), manipulation d'architectures Headless CMS (Strapi)</li>
+                            <li><strong>Expertise IA & Data :</strong> Intégration de l'IA Mistral, optimisation de prompts</li>
+                            <li><strong>Rigueur professionnelle :</strong> Application des normes de cybersécurité, conformité RGPD et travail en environnement agile</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-tech-list">
+                        <span class="exp-tech-tag">React</span>
+                        <span class="exp-tech-tag">Vue.js</span>
+                        <span class="exp-tech-tag">TypeScript</span>
+                        <span class="exp-tech-tag">Tailwind CSS</span>
+                        <span class="exp-tech-tag">Strapi</span>
+                        <span class="exp-tech-tag">CakePHP</span>
+                        <span class="exp-tech-tag">Supabase</span>
+                        <span class="exp-tech-tag">Mistral IA</span>
+                        <span class="exp-tech-tag">PostgreSQL</span>
+                    </div>
+
+                    <div class="exp-links-group">
+                        <a href="#" class="exp-github-link">🐙 Code source</a>
+                        <a href="{% static 'docs/Rapport_Stage_S6_NGUYEN_ThanhUyen.pdf' %}" class="exp-pdf-link" target="_blank" rel="noopener">📄 Rapport de stage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

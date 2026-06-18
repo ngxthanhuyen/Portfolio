@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Portfolio de Uyen</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    {% include "composants/header.html" %}
+
+    {% block content %}{% endblock %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const loader = document.getElementById('loaderOverlay');
+            const successModal = document.getElementById('successModal');
+            const errorModal = document.getElementById('errorModal');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    // Afficher le loader
+                    loader.style.display = 'flex';
+                    
+                    const formData = {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        subject: document.getElementById('subject').value,
+                        message: document.getElementById('message').value
+                    };
+                    
+                    try {
+                        const response = await fetch('/send-contact-email/', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                            },
+                            body: JSON.stringify(formData)
+                        });
+                        
+                        const result = await response.json();
+                        
+                        // Cacher le loader
+                        loader.style.display = 'none';
+                        
+                        if (result.success) {
+                            // Afficher le modal de succès
+                            successModal.classList.add('show');
+                            contactForm.reset();
+                            
+                            // Fermer le modal après 3 secondes
+                            setTimeout(() => {
+                                closeModal();
+                            }, 3000);
+                        } else {
+                            // Afficher le modal d'erreur
+                            document.getElementById('errorMessage').textContent = result.message;
+                            errorModal.classList.add('show');
+                        }
+                    } catch (error) {
+                        loader.style.display = 'none';
+                        document.getElementById('errorMessage').textContent = 'Erreur de connexion. Veuillez réessayer.';
+                        errorModal.classList.add('show');
+                    }
+                });
+            }
+        });
+
+        function closeModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.remove('show');
+        }
+
+        function closeErrorModal() {
+            const modal = document.getElementById('errorModal');
+            modal.classList.remove('show');
+        }
+
+        // Fermer le modal en cliquant en dehors
+        window.onclick = function(event) {
+            const successModal = document.getElementById('successModal');
+            const errorModal = document.getElementById('errorModal');
+            if (event.target === successModal) {
+                successModal.classList.remove('show');
+            }
+            if (event.target === errorModal) {
+                errorModal.classList.remove('show');
+            }
+        }
+    </script>
+</body>
+</html>
