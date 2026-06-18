@@ -8,7 +8,7 @@ load_dotenv()
 
 SECRET_KEY = os.getenv("SECRET_KEY", "default_secret_key")
 DEBUG = os.getenv("DEBUG", "True") == "True"
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost").split(",")
+ALLOWED_HOSTS = ["uyen-portfolio.onrender.com"]
 
 
 MAILJET_API_KEY = os.getenv("MAILJET_API_KEY")
