@@ -8,7 +8,11 @@ load_dotenv()
 
 SECRET_KEY = os.getenv("SECRET_KEY", "default_secret_key")
 DEBUG = os.getenv("DEBUG", "True") == "True"
-ALLOWED_HOSTS = ["uyen-portfolio.onrender.com"]
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    "uyen-portfolio.onrender.com",
+]
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'portfolio' / 'static']

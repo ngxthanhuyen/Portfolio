@@ -569,7 +569,7 @@ body {
 }
 
 .competences {
-    padding: 100px 60px;
+    padding: 0px 60px;
 }
 
 .competences-title {
@@ -1308,7 +1308,7 @@ body {
 }
 
 .experiences {
-    padding: 100px 60px;
+    padding: 0px 60px;
     background: #fff;
 }
 
