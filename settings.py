@@ -10,6 +10,9 @@ SECRET_KEY = os.getenv("SECRET_KEY", "default_secret_key")
 DEBUG = os.getenv("DEBUG", "True") == "True"
 ALLOWED_HOSTS = ["uyen-portfolio.onrender.com"]
 
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'portfolio' / 'static']
+STATIC_ROOT = BASE_DIR / 'staticfiles'  
 
 MAILJET_API_KEY = os.getenv("MAILJET_API_KEY")
 MAILJET_API_SECRET = os.getenv("MAILJET_API_SECRET")
@@ -28,6 +31,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
